@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 3rem;
+  font-family: Avenir, Helvetica, san-serif;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+main, .main {
+	display: grid;
+	grid-template-columns: minmax(80px, 1fr) minmax(25ch, 60ch) minmax(80px, 1fr);
+}
+article, .article {
+	grid-column: 2 / 3;
+}
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+img {
+	width: 100%;
+}

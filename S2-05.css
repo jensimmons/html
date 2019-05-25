@@ -1,0 +1,10 @@
+.custom-css cite {
+	font-style: normal;
+}
+.custom-css q::before {
+	content:'“';
+}
+.custom-css q::after {
+	content:'”';
+}
+
