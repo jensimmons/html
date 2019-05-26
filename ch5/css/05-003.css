@@ -1,0 +1,38 @@
+body {
+	margin:0;
+	background: lightgoldenrodyellow;
+}
+
+img {
+	display: block;
+	margin: 2rem 0;
+}
+
+img.example-3 {
+	width:100%;
+	height: auto;
+}
+
+img.example-4 {
+	width:50%;
+	height: auto;
+}
+
+.grid-layout main {
+	font-family: Avenir, Helvetica;
+	margin: 2rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-layout article {
+	padding: 1rem;
+	background: white;
+	border: 1px solid grey;
+}
+.grid-layout img {
+	width:100%;
+	height: auto;
+	margin: 0;
+}
