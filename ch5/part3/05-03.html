@@ -1,0 +1,45 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>srcset</title>
+    <link rel="stylesheet" href="05-03.css">
+  </head>
+
+	<body>
+		
+			<img src="dog-480.jpg" 
+					 alt="black dog smiling like crazy" 
+					 class="example-1" 
+					 height="360px" width="480px" />
+	
+			
+			<img src="dog-480.jpg" 
+					 srcset="dog-960.jpg  2x, 
+				   	  	   dog-1440.jpg 3x" 
+					 alt="smiling black dog"
+					 class="example-2" 
+					 height="360px" width="480px" />
+	
+			<img src="dog-480.jpg" 
+					 srcset="dog-480.jpg  480w, 
+				   	  	   dog-960.jpg  960w, 
+				   	  	   dog-1440.jpg 1440w, 
+					 				 dog-1920.jpg 1920w" 
+					 alt="smiling black dog"
+					 class="example-3" 
+					 height="320px" width="480px" />
+
+			<img src="dog-480.jpg" 
+					 srcset="dog-480.jpg  480w, 
+				   	  	   dog-960.jpg  960w, 
+				   	  	   dog-1440.jpg 1440w, 
+					 				 dog-1920.jpg 1920w" 
+					 alt="smiling black dog"
+					 class="example-4" 
+					 height="360px" width="480px" />
+
+	</body>
+	
+</html>

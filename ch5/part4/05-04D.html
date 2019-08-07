@@ -1,0 +1,34 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>srcset</title>
+    <link rel="stylesheet" href="05-04.css">
+  </head>
+
+	<body>
+		
+		<main>		
+			<article>
+				<picture>
+					<source media="(min-width:600px)"
+									srcset="dog-320.webp  320w, dog-320.jpg  320w,
+													dog-480.webp  480w, dog-480.jpg  480w, 
+													dog-720.webp  720w, dog-720.jpg  720w,
+													dog-960.webp  960w, dog-960.jpg  960w, 
+													dog-1440.webp 1440w, dog-1440.jpg 1440w, 
+													dog-1920.webp 1920w, dog-1920.jpg 1920w" >
+					<source srcset="dog-cropped-320.webp 320w, dog-cropped-320.jpg 320w,
+													dog-cropped-480.webp 480w, dog-cropped-480.jpg 480w, 
+													dog-cropped-720.webp 720w, dog-cropped-720.jpg 720w,
+													dog-cropped-960.webp 960w, dog-cropped-960.jpg 960w" >
+					<img src="dog-480.jpg" 
+							 alt="smiling black dog"
+							 height="360px" width="480px">
+				</picture>
+			</article>			
+		</main>
+	</body>
+	
+</html>

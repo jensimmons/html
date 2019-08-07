@@ -1,0 +1,41 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>srcset</title>
+    <link rel="stylesheet" href="05-04.css">
+  </head>
+
+	<body>
+		
+		<main>		
+			<article>
+				<picture>
+					<source srcset="dog-960.webp"  type="image/webp">					
+					<source srcset="dog-960.jpg"  type="image/jpeg">					
+					<img src="dog-480.jpg" 
+							 alt="smiling black dog"
+							 height="360px" width="480px">
+				</picture>
+
+
+Is this right?
+Or maybe this works? https://youtu.be/Rik3gHT24AM?t=780 
+
+Follow up by making all the WebP versions... And testing in 05-04D.
+
+ 
+				<picture>
+					<source srcset="dog-960.webp,
+													dog-960.jpg">					
+					<img src="dog-480.jpg"  alt="smiling black dog">
+				</picture>
+
+
+			</article>						 
+		</main>
+
+	</body>
+	
+</html>
