@@ -1,0 +1,83 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <title>Form Basics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/S11-02.css">
+  </head>
+  
+  <body>
+	<main>
+
+		<section>
+			<h1>Want Our Newsletter?</h1>
+			<form> 
+				<label>Name</label>
+				<input>
+				<label>Email</label>
+				<input>
+				<button>Sign up</button>
+			</form>
+		</section>
+
+		<section>
+			<h1>Want Our Newsletter?</h1>
+			<form action="success.html" method="get" id="newsletter_signup" > 
+				<label>Name</label>
+				<input name="name">
+				<label>Email</label>
+				<input name="email">
+				<button>Sign up</button>
+			</form>
+		</section>
+
+		<section>
+			<h1>Want Our Newsletter?</h1>
+			<form action="success.html" method="get"> 
+				<label for="name">Name</label>
+				<input name="name" id="name">
+				
+				<label>Email: <input name="email"></label>
+
+				<button>Sign up</button>
+			</form>
+		</section>
+
+		<section>
+			<h1>Newsletter Sign-Up</h1>
+			<form action="success.html" method="get"> 
+				<div>
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name">
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email">
+				</div>
+				<button type="reset">Reset</button>
+				<button type="submit">Sign up</button>
+			</form>	
+		</section>
+		
+		
+		<section>
+			<h1>Newsletter Sign-Up</h1>
+			<form action="success.html" method="get"> 
+				<div>
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" value="Jen">
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" placeholder="email" required>
+				</div>
+				<button type="reset">Reset</button>
+				<button type="submit">Sign up</button>
+			</form>	
+		</section>		
+			
+				
+  </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <title>Form Basics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/S11-02.css">
+  </head>
+  
+  <body>
+	<main>
+
+		<h2>Success!</h2>
+		<p>Thanks for signing up for our newsletter</p>
+		
+		<h2>Confirmation</h2>
+		<p>You used the following name and email to sign-up:</p>
+		<p id="signup"></p>
+		
+		<h2>Sign up again</h2>
+		<p><a href="S10-01.html">Back to form</a></p>
+
+		<script>
+			const resultsList = document.getElementById('signup')
+			new URLSearchParams(window.location.search).forEach((values,name) => {
+				resultsList.append(`${name}: ${value}`)
+				resultsList.append(document.createElement('br'))
+			})
+		</script>
+
+  </main>
+  </body>
+</html>
