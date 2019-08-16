@@ -4,21 +4,22 @@
     <title>Form Basics</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
   </head>
   
   <body>
 	<main>
-		<p>< <a href="S10-01.html">Back to form</a></p>
+		<p>< <a href="S10-02.html">Back to form</a></p>
 
 		<h2>Success!</h2>
-		<p>Thanks for signing up for our newsletter.</p><br><hr>
-		<h4>You used the following name and email to sign-up</h4>
-		<p id="signup"></p>
+		<h4>You submitted the following information...</h4>
+		<p id="data"></p>
 		
 		<script>
-			const resultsList = document.getElementById('signup')
+			const resultsList = document.getElementById('data')
 			new URLSearchParams(window.location.search).forEach((value,name) => {
 				resultsList.append(`${name}: ${value}`)
+				resultsList.append(document.createElement('br'))
 				resultsList.append(document.createElement('br'))
 			})
 		</script>

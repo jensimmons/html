@@ -1,0 +1,267 @@
+* { box-sizing: border-box; }
+
+:root {
+  --font-family: Avenir, Roboto, Helvetica, sans-serif;
+	--black: black;
+  --blue-black: #0c4364;
+  --blue-grey: #4f7c97;
+  --grey: #808080;
+  --teal: #0b8663;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--blue-black);
+}
+
+body {
+  margin: 2rem;
+}
+@media (min-width: 600px) {
+	body {
+	  margin: 4rem;
+	}
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+
+label {
+	display: block;
+	padding: 1.25rem 0 0.25rem;
+}
+
+textarea,
+input,
+fieldset,
+select {
+	display: block;
+  width: 100%;
+}
+fieldset textarea,
+fieldset input {
+	display: inline;
+	width: auto;
+}
+
+textarea,
+input,
+select {
+  padding: 0.5rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--black);
+}
+textarea,
+input,
+select {
+  border: 1px solid var(--grey);
+}
+
+textarea:focus,
+input:focus,
+select:focus,
+fieldset:focus-within {
+  border: 1px solid var(--teal);
+  box-shadow: 0px 0px 2px var(--teal);
+}
+div:focus-within label {
+	color: var(--teal);
+}
+
+fieldset {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	margin: 3rem 0;
+  border: 1px solid var(--grey);
+	grid-column: 2;
+}
+legend {
+	margin: 0 0 0.5rem -1rem;
+	padding: 0.14rem 0.5rem 0.08rem 0.5rem;	
+	color: black;
+	background: #b4dfe6;
+}
+fieldset:focus-within legend {
+	color: var(--teal);
+}
+
+select {
+	-webkit-appearance: none;
+	background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") no-repeat right .75rem center/16px 12px;
+}
+
+input[type="search"]::placeholder {
+	text-align: right;
+}
+input[type="color"] {
+  inline-size: 3.6rem;
+  block-size: 1.8rem;
+  padding: 0;
+  border: none;
+}
+input[type="color"]:focus {
+  padding: 3px;
+  background: var(--teal);
+}
+input[type="file"] {
+	padding-inline-start: 0;
+  border: none;
+}
+input[type="file"]:focus {
+	outline: 1px solid var(--teal);
+}
+
+input[type="checkbox"] {
+	width: min-content;
+}
+
+@supports(-webkit-appearance: none) {
+	input[type="checkbox"], 
+	fieldset input[type="checkbox"] {
+		-webkit-appearance: none;
+		width: 1.75rem;
+		height: 1.75rem;
+		border: 1px solid var(--grey);
+		margin: 0.3rem 0 0 0;
+		padding: 0;
+	}
+	input[type="checkbox"]:focus, 
+	fieldset input[type="checkbox"]:focus {
+		border: 1px solid var(--teal);
+	}
+	input[type="checkbox"]:checked, 
+	fieldset input[type="checkbox"]:checked {
+		position: relative;
+		background: none; /* Make sure the box is not dark on iOS, when checked */
+	}
+	input[id="checkbox"]:checked::after, 
+	fieldset input[type="checkbox"]:checked::after {
+		position: absolute;
+		top: 6px;
+		left: 2px;
+		
+		/* Create a checkmark in CSS. Could an SVG or content: "✓"; instead. */
+		width: 1.0rem;
+		height: 0.3rem;
+		content: "";
+		border: 5px solid var(--blue-black);
+		border-right: none;
+		border-top: none;
+		transform: rotate(-45deg);
+	}
+
+	input[type="radio"], 
+	fieldset input[type="radio"] {
+		-webkit-appearance: none;
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 50%;
+		border: 1px solid var(--grey);
+		margin: 0.3rem 0 0 0;
+		padding: 0;
+	}
+	input[type="radio"]:focus, 
+	fieldset input[type="radio"]:focus {
+		border: 1px solid var(--teal);
+	}
+	input[type="radio"]:checked, 
+	fieldset input[type="radio"]:checked {
+		position: relative;
+		
+		background: none; /* Make sure the box is not dark on iOS, when checked */
+	}
+	input[id="radio"]:checked::after, 
+	fieldset input[type="radio"]:checked::after {
+		position: absolute;
+		top: 0.35rem;
+		left: 0.35rem;
+		width: 0.9rem;
+		height: 0.9rem;
+		background: var(--blue-black);
+		border-radius: 50%;
+		content: "";
+	}
+}
+
+
+
+button {
+  grid-column: 2;
+  justify-self: end;    
+  display: block;
+  padding: 0.4em 0.8em;
+  background: #8befff;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--blue-black);
+}
+button:focus {
+	outline: none;
+	background: #96ffe1;
+	box-shadow: 1px 1px 5px #ccc;
+}
+
+
+@supports (display: grid) {
+	@media (min-width: 600px) {		
+		form > div {
+		  display: contents;
+		  /* It may not yet be a good idea to use this on a real website.
+			  `display: contents` has accessibility bugs that need to get fixed!
+			  https://caniuse.com/#feat=css-display-contents
+			  Subgrid might be a better solution. Depends on level of browser support.
+			  https://caniuse.com/#search=subgrid
+			  */
+		}
+		form {
+			display: grid;
+			grid-template-columns: max-content minmax(10ch, 40ch);
+			gap: 1.5rem 1rem;
+		}
+		fieldset {
+			margin: 1rem 0;
+		}
+		label {
+		  text-align: right; /* fallback for IE11, Edge 18, and earlier */
+		  text-align: end;   /* correct way to do text-align, 
+			  										now that Logical Properties are supported, 
+														https://caniuse.com/#feat=css-logical-props */
+			padding: calc(0.5rem + 1px) 0;
+		}
+		fieldset label {
+		  text-align: left; 
+		  text-align: start;  
+			padding: calc(0.5rem + 1px) 0 calc(0.5rem + 1px) 1rem;
+		}		
+	select {
+		grid-column: 2;
+	}
+	}
+}
+
+
+
+
+
+/* If you'd like to remove the boxes around the fieldset, this will do it:
+	
+fieldset {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  border: none;
+  min-inline-size: min-content;
+} 
+
+*/
+
