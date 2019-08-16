@@ -54,13 +54,8 @@ select {
   font-family: var(--font-family);
   font-size: 1rem;
   color: var(--black);
-}
-textarea,
-input,
-select {
   border: 1px solid var(--grey);
 }
-
 textarea:focus,
 input:focus,
 select:focus,
@@ -92,6 +87,12 @@ fieldset:focus-within legend {
 select {
 	-webkit-appearance: none;
 	background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") no-repeat right .75rem center/16px 12px;
+}
+
+textarea {
+	/* If you apply min-width and max-width, you can keep the box from being resized in the horizontal direction by the user. Pretty cool. */
+/*	min-width: 100%;
+	max-width: 100%; */
 }
 
 input[type="search"]::placeholder {
@@ -171,7 +172,6 @@ input[type="checkbox"] {
 	input[type="radio"]:checked, 
 	fieldset input[type="radio"]:checked {
 		position: relative;
-		
 		background: none; /* Make sure the box is not dark on iOS, when checked */
 	}
 	input[id="radio"]:checked::after, 
