@@ -91,8 +91,8 @@ select {
 
 textarea {
 	/* If you apply min-width and max-width, you can keep the box from being resized in the horizontal direction by the user. Pretty cool. */
-/*	min-width: 100%;
-	max-width: 100%; */
+	min-width: 100%;
+	max-width: 100%; 
 }
 
 input[type="search"]::placeholder {
