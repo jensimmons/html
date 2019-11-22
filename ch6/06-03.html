@@ -6,13 +6,22 @@
 	</head>
 	<body>
 
-		<h1>Video with Captions</h1>
 		<video controls>
 			<source src="video/vp9/moonwalk.480p.vp9.webm" type="video/webm">
 			<source src="video/h264/moonwalk.480p.h264.mp4" type="video/mp4">
-			<source src="video/ogg/moonwalk.480p.ogv.webm" type="video/webm">
-			<track default label="English" kind="captions" srclang="en" src="captions/moonwalk.vtt">
-		  <track label="Español" kind="captions" srclang="es" src="captions/moonwalk.es-la.es.vtt">	
+
+		  <track src="captions/moonwalk.vtt"
+		  			 kind="captions" 
+		         label="English"
+		         srclang="en"
+		         default>
+		  
+
+		  <track src="captions/moonwalk.es-la.es.vtt"
+		         kind="subtitles"
+		         label="Español"
+		         srclang="es">	
+
 		  <p>This would be a video of a moonwalk, if your device supported playing this video.</p>
 		</video>
 
