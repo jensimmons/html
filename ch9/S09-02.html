@@ -1,0 +1,102 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+  <head>
+    <title>Form Basics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+      
+  
+  <body>
+	<main>
+		<section class="">
+    		<h1>Our Form</h1>			
+    		<form action="received.html" method="get"> 
+    			<div>
+    				<label for="name">Name</label>
+    				<input id="name" name="name" type="text">
+    			</div>
+    			<div>
+    				<label for="email">Email</label>
+    				<input id="email" name="email" type="email" 
+    				       placeholder="you@example.com">
+    			</div>
+
+
+    			<div>
+    				<label for="password">Password</label>
+    				<input id="password" name="password" type="password">
+    			</div>
+    			<div>
+    				<label for="search">Search</label>
+    				<input id="search" name="search" type="search" placeholder="&#128269;">
+    			</div>
+    			<div>
+    				<label for="phone">Phone Number</label>
+    				<input id="phone" name="phone" type="tel">
+    			</div>
+    			
+    			<div>
+    				<label for="textarea">Text Area</label>
+    				<textarea  id="textarea" name="textarea" cols="30" rows="15"></textarea>
+    			</div>
+					    			
+    			<div>
+    				<label for="date">Date</label>
+	    			<input id="date" name="date" type="date">
+    			</div>
+
+    			<div>
+    				<label for="color">Color</label>
+	    			<input id="color" name="color" type="color">
+    			</div>
+  
+    			<div>
+    				<label for="file">File</label>
+	    			<input id="file" name="file" type="file" accept="image/*" multiple>
+    			</div>
+
+    			<div>
+    				<label for="checkbox">Checkbox</label>
+						<input id="checkbox" name="simplecheckbox" type="checkbox" value="The checkbox is checked" checked >
+    			</div>
+
+					<div>
+						<label for="selectlist">Choose one</label>
+						<select id="selectlist" name="selectlist">
+						  <option>First Option</option>
+						  <option>Second Choice</option>
+						  <option>Third Thing</option>
+						</select>
+					</div>	
+					    			
+					<fieldset>
+					  <legend>Checkbox fields inside a fieldset</legend>
+						<input id="thischeck" name="checkboxlist" type="checkbox" value="This" checked >
+						<label for="thischeck">This</label>
+						<input id="orcheck" name="checkboxlist" type="checkbox" value="And Or">
+						<label for="orcheck">And/Or</label>
+						<input id="thatcheck" name="checkboxlist" type="checkbox" value="That">
+						<label for="thatcheck">That</label>
+					</fieldset>
+					
+					<fieldset>
+					  <legend>Radio button list inside a fieldset</legend>
+					  <input id="thisradio" name="radiobutton" type="radio" value="This" checked>
+					  <label for="thisradio">This</label>
+					  <input id="orradio" name="radiobutton" type="radio" value="Or">
+					  <label for="orradio">Or</label>
+					  <input id="thatradio" name="radiobutton" type="radio" value="That">
+					  <label for="thatradio">That</label>
+					</fieldset>
+				
+    			
+    			<button type="submit">Submit</button>
+    		</form>	
+		</section>	
+				
+    </main>
+  </body>
+</html>
